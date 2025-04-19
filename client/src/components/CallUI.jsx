@@ -8,7 +8,11 @@ const CallUI = ({ username, users, onLeave, muted, toggleMute, callStart }) => {
       const duration = Math.floor((Date.now() - callStart) / 1000);
       const minutes = String(Math.floor(duration / 60)).padStart(2, '0');
       const seconds = String(duration % 60).padStart(2, '0');
-      setTime(${minutes}:${seconds});
+      newFunction();
+
+      function newFunction() {
+        setTime($, { minutes }, $, { seconds });
+      }
     }, 1000);
     return () => clearInterval(interval);
   }, [callStart]);
