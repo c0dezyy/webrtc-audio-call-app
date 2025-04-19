@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 import CallUI from './components/CallUI';
 
-const socket = io('https://your-render-url.onrender.com'); // <- replace this with your actual URL
+const socket = io('https://webrtc-audio-call-app.onrender.com'); 
 
 const App = () => {
   const [username, setUsername] = useState(localStorage.getItem('username') || '');
